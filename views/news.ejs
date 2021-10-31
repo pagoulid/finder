@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Search everything about you want to learn">
+    <meta name="pagoulid" content="FiNdeR Breaking News">
+    <!-- Bootstrap for better styling -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FiNdeR Breaking News</title>
+
+
+    <script src="https://kit.fontawesome.com/63759185c4.js" crossorigin="anonymous"></script>
+    <script>
+
+    function ToggleHandler() {
+        const navs = document.querySelectorAll('.Navbar__Items')
+  
+        navs.forEach(nav => nav.classList.toggle('Navbar__ToggleShow'));
+    }
+
+    
+
+
+    </script>
+    <style>
+
+
+    .Navbar {
+        background-color:darkslategray;
+        font-family: sans-serif;
+        color: white;
+        font-weight: bolder;
+        display: flex;
+        flex-direction: column;
+    
+    }
+
+    .Navbar__Link-toggle{
+        cursor:pointer;
+        display:initial;
+    }
+
+    .Navbar__Items{
+        display:none;
+    }
+
+    .Navbar__ToggleShow{
+        display:flex;
+        flex-direction: column;
+        text-align: center;
+        
+    }
+    </style>
+
+  
+</head>
+<body>
+  <div class="Navbar">
+
+      <div class="Navbar__Link Navbar__Link-toggle">
+          <i onclick="ToggleHandler()" class="fas fa-bars"></i>
+      </div>
+      <nav  class="Navbar__Items">
+          <div class = "Navbar__Link"><a class = 'lang'  href="/home">Home</a></div>
+          <div class = "Navbar__Link"><a class = 'lang'  href="/home">News</a></div>
+      </nav>
+  </div>
+
+
+    <div class="container">
+        <h1 class = "mb-4">Breaking News</h1>
+       
+        <% news.forEach(function(item){ %>
+         
+          
+            <div class="card mt-4" >
+              
+                <h4 id = "title" name="title" value = "title" class = "card-title"  ><%= item.source%></h4>
+                
+                <img style="width:10em;height:10em;" class="center" src="<%= item.thumbnail%>" />
+                <div class = "card-subtitle text-muted mb-2"><%= item.date%></div>
+                <div class = "card-text"><%= item.title%></div>
+                <a href = "<%= item.link%>" class = "card-link"><%= item.link%></a>
+                
+                
+              </div>
+    
+        <% }) %>
+  
+  
+         
+  
+          
+          
+      </div>
+      <!--Passing args from node-->
+  
+      
+  </body>
+  </html>

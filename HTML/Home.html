@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description" content="Search everything about you want to learn">
+    <meta name="pagoulid" content="FiNdeR Homepage Search Engine">
+    <title>FiNdeR Homepage Search Engine</title>
+
+
+    <script src="https://kit.fontawesome.com/63759185c4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    
+   
+
+    <script>
+
+    function ToggleHandler() {
+        const navs = document.querySelectorAll('.Navbar__Items')
+  
+        navs.forEach(nav => nav.classList.toggle('Navbar__ToggleShow'));
+    }
+
+    
+
+
+    </script>
+    <style>
+
+
+    .Navbar {
+        background-color:darkslategray;
+        font-family: sans-serif;
+        color: white;
+        font-weight: bolder;
+        display: flex;
+        flex-direction: column;
+    
+    }
+
+    .Navbar__Link-toggle{
+        cursor:pointer;
+        display:initial;
+    }
+
+    .Navbar__Items{
+        display:none;
+    }
+
+    .Navbar__ToggleShow{
+        display:flex;
+        flex-direction: column;
+        text-align: center;
+        
+    }
+
+
+    p{
+        font-size: xx-large;
+        font-weight: bolder;
+        color: darkslategrey;
+        margin-top: 2em;
+    }
+    </style>
+</head>
+<body>
+
+    <div class="Navbar">
+
+        <div class="Navbar__Link Navbar__Link-toggle">
+            <i onclick="ToggleHandler()" class="fas fa-bars"></i>
+        </div>
+        <nav  class="Navbar__Items">
+            <div class = "Navbar__Link"><a class = 'lang'  href="/home">Home</a></div>
+            <div class = "Navbar__Link"><a class = 'lang'  href="/news">News</a></div>
+        </nav>
+    </div>
+
+    <div style="margin:0em 0em 0em 22em;">
+        <p >Search for Anything </p>
+        <p style="padding-left: 5em;">you want to know</p>
+        <p style="padding-left: 10em;">with a click of a button...</p>
+
+
+    </div>
+
+        <form style="display:inline-block;margin:5em 0em 0em 25em;" method="post">
+
+            <input style ="height:3em;width:25em;" type="text" id="query" name="query" placeholder="What are you interested for today?">
+            <input style ="background-color:darkslategrey;color:black;height:2.5em;margin-left:5px;"type="submit" id="button" value="Search">
+        </form>
+
+
+    
+    
+
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "finder",
+  "version": "1.0.0",
+  "description": "Webpage with Google search API implementation",
+  "main": "index.js",
+  "scripts": {
+    "Devtest": "nodemon index.js"
+  },
+  "author": "pagoulid",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.14"
+  },
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "ejs-lint": "^1.2.1",
+    "express": "^4.17.1",
+    "google-search-results-nodejs": "^2.0.1",
+    "google-search-results-serpwow": "^0.0.14"
+  }
+}

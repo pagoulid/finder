@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1 style="margin:2em;font-weight: bolder;font-style: italic;color: darkslategrey;">Top searches</h1>
+    <% top_news.forEach(function(item){ %>
+
+
+         
+       
+        <div  class="card mt-1" >
+          
+            <h4 id = "title" name="title" value = "title" class = "card-title"  ><%= item.source%></h4>
+            
+            <img style="width:10em;height:10em;" class="center" src="<%= item.thumbnail%>" />
+            <div class = "card-subtitle text-muted mb-2"><%= item.date%></div>
+            <div class = "card-text"><%= item.title%></div>
+            <a href = "<%= item.link%>" class = "card-link"><%= item.link%></a>
+            
+            
+          </div>
+    
+    <% }) %>
+</body>
+</html>

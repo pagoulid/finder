@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Search everything about you want to learn">
+    <meta name="pagoulid" content="FiNdeR Results">
+    <title>FiNdeR Results</title>
+
+    
+    <!-- Bootstrap for better styling -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fontawesome kit for icon styling-->
+    <script src="https://kit.fontawesome.com/63759185c4.js" crossorigin="anonymous"></script>
+    <script>
+
+    function ToggleHandler() {
+        const navs = document.querySelectorAll('.Navbar__Items')
+  
+        navs.forEach(nav => nav.classList.toggle('Navbar__ToggleShow'));
+    }
+
+    
+
+
+    </script>
+    <style>
+
+
+    .Navbar {
+        background-color:darkslategray;
+        font-family: sans-serif;
+        color: white;
+        font-weight: bolder;
+        display: flex;
+        flex-direction: column;
+    
+    }
+
+    .Navbar__Link-toggle{
+        cursor:pointer;
+        display:initial;
+    }
+
+    .Navbar__Items{
+        display:none;
+    }
+
+    .Navbar__ToggleShow{
+        display:flex;
+        flex-direction: column;
+        text-align: center;
+        
+    }
+    </style>
+    
+
+  
+</head>
+<body>
+    <!--hide navbar links until ToggleHandler is triggered-->
+    <!--implement links on flex element toggleshow in order to show them-->
+
+    <div class="Navbar">
+
+        <div class="Navbar__Link Navbar__Link-toggle">
+            <i onclick="ToggleHandler()" class="fas fa-bars"></i>
+        </div>
+        <nav  class="Navbar__Items">
+            <div class = "Navbar__Link"><a class = 'lang'  href="/home">Home</a></div>
+            <div class = "Navbar__Link"><a  class = 'lang' href="/news">News</a></div>
+        </nav>
+    </div>
+   
+    <div  class="container">
+        <h1 class = "mt-4">Results</h1>
+       
+        <% news.forEach(function(item){ %>
+         
+          
+            <div class="card mt-4" >
+              
+                <h4 id = "title" name="title" value = "title" class = "card-title"  ><%= item.title%></h4>
+                 
+                <div class = "card-text"><%= item.snippet%></div>
+                <a href = "<%= item.link%>" class = "card-link"><%= item.link%></a>
+                
+                
+            </div>
+    
+        <% }) %>
+        
+        <%- include('show/valid', {top_news:top_news}); %>
+        
+
+    </div>
+        
+    <!--Validate first if any top searches exists for your query to show them too-->
+   
+  </body>
+  </html>
