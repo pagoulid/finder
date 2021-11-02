@@ -31,7 +31,7 @@
 
 **Samples:**
 
-![Main page sample ](https://github.com/pagoulid/finder/blob/main/Main1.png)
+
 ![Main page sample ](https://github.com/pagoulid/finder/blob/main/Main2.png)
 ![HomeSearch page sample ](https://github.com/pagoulid/finder/blob/main/Searchpage.png)
 ![Search Results page sample ](https://github.com/pagoulid/finder/blob/main/SearchResults1.png)
