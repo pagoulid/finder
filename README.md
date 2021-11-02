@@ -7,6 +7,6 @@
 
 **Command Instructions on Terminal:**
     1. npm install (to get node_modules)
-    2. npm run Devtest for execution (Using nodemon to test any changes appliance upon runtime)
+    1. npm run Devtest for execution (Using nodemon to test any changes appliance upon runtime)
 
 *App runs on http://localhost:3000*
