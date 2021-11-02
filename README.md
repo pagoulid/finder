@@ -4,7 +4,15 @@
  
 **Description:**
       
-       
+  Application Navigation Menu consists of :
+  
+   1. Home Section :
+      
+      * A search page for further exploration
+        
+   2.  News Section :
+   
+       * Provides the latest news
  
  
 **Command Instructions on Terminal:**
@@ -17,6 +25,11 @@
 **Other:** 
    * NPM version 8.1.2 
    * Node version 12.18.3
+   
+
+
+
+**Samples:**
 
 ![Main page sample ](https://github.com/pagoulid/finder/blob/main/Main1.png)
 ![Main page sample ](https://github.com/pagoulid/finder/blob/main/Main2.png)
